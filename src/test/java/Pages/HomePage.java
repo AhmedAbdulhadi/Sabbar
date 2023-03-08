@@ -111,9 +111,13 @@ public class HomePage extends PageBase {
         }
     }
 
-    public void clickOnGetStarted(){
+    public void clickOnGetStarted() throws InterruptedException {
 
-        wait.until(ExpectedConditions.visibilityOf(startButton)).click();
+        clickOnElement(getStartButton());
+    }
+    public void clickOnSigninButton() throws InterruptedException {
+
+        clickOnElement(getSignInButton());
     }
 
 }

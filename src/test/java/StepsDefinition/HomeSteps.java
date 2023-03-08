@@ -14,24 +14,13 @@ public class HomeSteps {
     @When("^Click on (.*?) option in cookies\\.$")
     public void clickOnCookkies(String option) throws InterruptedException {
 
-        switch (option) {
-            case "allow":
-                PageFactory.instance().homePage().clickOnElement(PageFactory.instance().homePage().getAllowAllButton());
-                break;
-            case "deny":
-                PageFactory.instance().homePage().clickOnElement(PageFactory.instance().homePage().getDenyButton());
-                break;
-            default:
-                System.err.println("wrong");
-        }
-
-    //    PageFactory.instance().homePage().cookiesAction(option);
         PageFactory.instance().homePage().cookiesAction(option);
+
     }
 
     @When("Cookies popup should be dismissed.")
     public void verifyCookiesPopup() throws InterruptedException {
-        Assert.assertTrue(PageFactory.instance().homePage().verifyElementIsDisplayed(PageFactory.instance().homePage().getCookiesPopUpMessage()));
+        Assert.assertTrue(PageFactory.instance().homePage().verifyCookiesDialogIfDisplayed());
     }
 
     @When("^I click on industries dropdown list and select (.*?)\\.$")
@@ -45,13 +34,13 @@ public class HomeSteps {
     }
 
     @When("I click on get started button.")
-    public void iClickOnGetStartedButton() throws InterruptedException {
-        PageFactory.instance().homePage().clickOnElement(PageFactory.instance().homePage().getStartButton());
+    public void clickOnGetStartedButton() throws InterruptedException {
+        PageFactory.instance().homePage().clickOnGetStarted();
     }
 
     @When("I click on signin button.")
     public void iClickOnSigninButton() throws InterruptedException {
-        PageFactory.instance().homePage().clickOnElement(PageFactory.instance().homePage().getSignInButton());
+        PageFactory.instance().homePage().clickOnSigninButton();
 
     }
 

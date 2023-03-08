@@ -40,7 +40,6 @@ public class PageBase {
     public String getPageCurrentUrl() throws InterruptedException {
 
         Thread.sleep(5000);
-        System.out.println("URLLLLLL ISSSS : "+ driver.getCurrentUrl());
         return driver.getCurrentUrl();
     }
 

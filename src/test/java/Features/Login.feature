@@ -5,5 +5,5 @@ Feature: Login Scenario
     When Cookies popup should be dismissed.
     When I click on get started button.
     When I click on signin button.
-    When i fill in my login information.
+    When i fill in my login information email is "ahmedwajieh93@gmail.com" and password is "Test@1234".
     Then i should be able to navigate to dashboard app.
