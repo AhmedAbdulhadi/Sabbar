@@ -2,16 +2,16 @@
 
 This project is used to implement the task assigned by Sabbar.
 
-## What you need to run it:
+#### What you need to run it:
 Java 1.8
 Maven
 Reports
-To export report run this command
 
-## mvn clean verify
+#### To export report run this command
+> mvn clean verify
 Reports are located under the followin path /target/cucmber-html-reports
 
-## Technologies
+#### Technologies
 Selenium
 Cucumber
 Junit
